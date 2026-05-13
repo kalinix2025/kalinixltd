@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color:rgb(137, 226, 4);
+}
+
+h1{
+  text-align: left;
+    background-color: black;  
+    color: white;
+
+     
+}
+h2{
+    text-align: center;
+    background-color: #ff7200;
+}
+ 
+.navbar a{
+    color: darkgreen;
+    text-decoration: none;
+    padding: 5px;   /*controls spacing between navigation buttons*/
+    display: block;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dodgerblue;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-top: 0px;
+
+}
+
+.container{
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    background-color: #ff7200;
+    margin-right: 30px;
+}
+
+.container :hover{
+background-color: white;
+}
+
+.slider-container {
+    width: full; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden; /* Hides images outside the view */
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.slide-track {
+    display: flex;
+    width: calc(800px * 4); /* Width of all slides combined (container width * number of slides, including repeated ones) */
+    animation: slide 15s linear infinite; /* Animation duration and type */
+}
+
+.slide {
+    width: 800px; /* Same as container width */
+    height: 400px; /* Same as container height */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Move the width of half the images to create a loop effect */
+        transform: translateX(calc(-800px * 3)); 
+    }
+ 

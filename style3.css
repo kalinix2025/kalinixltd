@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color:rgb(173, 252, 173);
+}
+
+h1{
+  text-align: center;
+    background-color: #ff7200;  
+    color: white;
+    padding-top: 10px;
